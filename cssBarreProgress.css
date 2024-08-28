@@ -1,0 +1,36 @@
+:root {
+    --css-progress: 50%; /* Définissez la progression pour CSS ici */
+}
+
+.css-progress-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.css-progress-bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.css-progress-fill {
+    height: 100%;
+    background-color: #0066ff;
+    width: var(--css-progress); /* Utilisez la variable CSS pour définir la largeur */
+    transition: width 0.3s;
+}
+
+.css-progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.css-progress-label {
+    text-align: center;
+    width: 25%;
+}

@@ -1,0 +1,36 @@
+:root {
+    --sc-progress: 70%; /* Définissez la progression pour HTML ici */
+}
+
+.sc-progress-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.sc-progress-bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.sc-progress-fill {
+    height: 100%;
+    background-color: #0066ff;
+    width: var(--sc-progress); /* Utilisez la variable CSS pour définir la largeur */
+    transition: width 0.3s;
+}
+
+.sc-progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.sc-progress-label {
+    text-align: center;
+    width: 25%;
+}

@@ -1,0 +1,36 @@
+:root {
+    --js-progress: 3%; /* Définissez la progression pour JavaScript ici */
+}
+
+.js-progress-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.js-progress-bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.js-progress-fill {
+    height: 100%;
+    background-color: #0066ff;
+    width: var(--js-progress); /* Utilisez la variable CSS pour définir la largeur */
+    transition: width 0.3s;
+}
+
+.js-progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.js-progress-label {
+    text-align: center;
+    width: 25%;
+}

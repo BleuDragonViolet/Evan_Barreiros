@@ -1,0 +1,36 @@
+:root {
+    --wep-progress: 100%; /* Définissez la progression pour world excel powerpoint ici */
+}
+
+.wep-progress-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.wep-progress-bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.wep-progress-fill {
+    height: 100%;
+    background-color: #0066ff;
+    width: var(--wep-progress); /* Utilisez la variable CSS pour définir la largeur */
+    transition: width 0.3s;
+}
+
+.wep-progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.wep-progress-label {
+    text-align: center;
+    width: 25%;
+}

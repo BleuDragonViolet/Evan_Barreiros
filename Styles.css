@@ -1,0 +1,504 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #080820;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth; /* Défilement fluide */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #0D103D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-left: 220px;
+    padding: 60px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.profile {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out; /* Animation de l'image au survol */
+}
+
+.profile-pic:hover {
+    transform: scale(1.1); /* Agrandir légèrement au survol */
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-top: 40px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #0D113F;
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px solid;
+    width: 180px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+.skill-card:nth-child(1) {
+    border-color: #FF4500;
+}
+
+.skill-card:nth-child(2) {
+    border-color: #1E90FF;
+}
+
+.skill-card:nth-child(3) {
+    border-color: #fffb00;
+}
+
+.skill-card:nth-child(4) {
+    border-color: #0bf802;
+}
+
+.skill-card:nth-child(5) {
+    border-color: #FF69B4;
+}
+
+.skill-card:nth-child(6) {
+    border-color: #7809d3;
+}
+
+.skill-card img {
+    width: 70%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.skill-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.skill-description {
+    display: none;
+    background-color: #282c4d;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.skill-description.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    section {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Animations pour l'easter egg et la destruction de la page */
+@keyframes explosion {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+@keyframes return-from-sky {
+    0% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.profile-pic.explode {
+    animation: explosion 1s forwards;
+}
+
+.profile-pic.return {
+    animation: return-from-sky 1.5s forwards;
+}
+
+/* Styles du menu contextuel personnalisé */
+.context-menu {
+    display: none;
+    position: absolute;
+    background-color: #151B68;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.context-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.context-menu ul li {
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.context-menu ul li:hover {
+    background-color: #0D103D;
+}
+
+@keyframes destroy {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.destroy-page * {
+    animation: destroy 3s forwards; /* Animation de destruction allongée à 3 secondes */
+}
+
+/* Styles améliorés pour la section "À propos" */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.highlighted-text {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+    animation: text-glow 2s infinite alternate;
+}
+
+.intro-text {
+    text-align: center;
+    font-style: italic;
+    color: #ffffff;
+}
+
+.texteP {
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #b8b4b4;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0; /* Ajouter des marges pour espacer les paragraphes */
+}
+
+.textePP {
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #dfdfdf;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0; /* Ajouter des marges pour espacer les paragraphes */
+}
+
+@keyframes move-train {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes text-glow {
+    0% {
+        text-shadow: 0 0 5px #0D103D;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff;
+    }
+}
+
+.content .credit {
+    position: fixed;
+    bottom: 0;
+    left: 200px; /* Décalage de la barre entière vers la droite pour éviter le menu */
+    right: 0;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+.content .credit p {
+    margin: 0;
+}
+
+/*<!-- Menu contextuel personnalisé -->*/
+/* Styles du menu contextuel personnalisé 
+.context-menu {
+    display: none;
+    position: absolute;
+    background-color: #151B68;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+.context-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.context-menu ul li {
+    padding: 5px 15px;
+    cursor: pointer;
+    position: relative; /* Ajouté pour que le sous-menu soit relatif à l'élément parent 
+}
+
+.context-menu ul li:hover {
+    background-color: #0D103D;
+}
+
+/* Positionnement du sous-menu "Autres" à droite, aligné avec le bouton parent *
+.context-menu ul li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 0; /* Alignement exact sur le bouton parent *
+    left: 100%; /* Le sous-menu s'ouvre à droite du parent *
+    background-color: #151B68;
+    border-radius: 5px;
+    padding: 5px 0;
+    min-width: 150px; /* Assurez-vous que le sous-menu a une largeur minimale *
+}
+
+.context-menu ul li:hover ul.submenu {
+    display: block;
+}*/
+
+
+:root {
+    --progress: 30%; /* Définissez la progression ici */
+}
+
+.html-progress-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.html-progress-bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.html-progress-fill {
+    height: 100%;
+    background-color: #0066ff;
+    width: var(--progress); /* Utilisez la variable CSS pour définir la largeur */
+    transition: width 0.3s;
+}
+
+.html-progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.html-progress-label {
+    text-align: center;
+    width: 25%;
+}
+
+.slider-1 {
+    max-width: 600px;
+    margin: 100px auto;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+}
+
+.slider-1 .slider {
+    animation: slider-1 12s infinite ease-in-out;
+    display: flex;
+    /* Si on veut faire glisser vers la droite */
+    /* Il faut aussi changer l'animation(transform) en valeurs positives */
+    /* flex-direction: row-reverse; */
+}
+
+.slider-1 p {
+    background: #0D103D;
+    flex-shrink: 0;
+    padding: 72px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    color: #f1f1f1;
+}
+
+.slider img {
+    width: 50px; /* Ajustez la taille selon vos besoins */
+    height: auto;
+    margin-right: 10px; /* Espace entre l'image et le texte */
+}
+
+/*
+    5% par transition, nombre choisi arbitrairement.
+    reste divisé par nb de pauses
+    80(%) / 4 = 20(%) par pause
+*/
+
+@keyframes slider-1 {
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+    25%,
+    45% {
+        transform: translateX(-100%);
+    }
+    50%,
+    70% {
+        transform: translateX(-200%);
+    }
+    75%,
+    95% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+.no-underline {
+    text-decoration: none;
+    color: #f1f1f1; /* Assurez-vous que la couleur du texte est visible */
+}
+

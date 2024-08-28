@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evan Barreiros</title>
+    <link rel="icon" type="image/png" href="ressource/Image/me.ico">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="cssBarreProgress.css">
+    <link rel="stylesheet" href="htmlBarreProgress.css">
+    <link rel="stylesheet" href="jsBarreProgress.css">
+    <link rel="stylesheet" href="pyBarreProgress.css">
+    <link rel="stylesheet" href="scBarreprogress.css">
+    <link rel="stylesheet" href="wepBarreprogress.css">
+    <script src="Jquery3.7.1.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="SkillCard.js" defer></script>
+</head>
+<body>
+    <nav>
+        <!-- Menu contextuel personnalisé 
+        <div id="custom-context-menu" class="context-menu">
+            <ul>
+                <li id="refresh-page">Actualiser</li>
+                <li id="more-options">Autres
+                    <ul class="submenu">
+                        <li id="inspect-page">Inspecter</li>
+                        <li id="view-source">Code source</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>-->
+        <ul>
+            <li><a href="#about">À propos de moi</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li class="center-text"><a href="#projects">Mon Avenir</a></li>
+            <li class="center-text"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <div class="profile">
+            <div class="profile-pic" style="background-image: url('ressource/Image/me.jpg');"></div>
+            <h1 class="highlighted-text">Evan BARREIROS</h1>
+            <p class="intro-text">Jeune développeur web de 17 ans, passionné par l'informatique</p>
+            <br><br>
+            <p class="texteP">
+                Bonjour à tous,
+            </p>
+            <p class="texteP">
+                Je m'appelle <strong>Evan</strong>, j'ai <strong>17 ans</strong> et je suis passionné par les <strong>jeux vidéo</strong> et le <strong>développement de sites web</strong>.
+                Actuellement en Terminale dans le domaine des <strong>Systèmes Numériques</strong>, je nourris l'ambition de devenir <strong>programmateur/développeur</strong>.
+            </p>
+            <p class="texteP">
+                Ce site que vous parcourez est le fruit de ma passion pour l'informatique et le désir de m'améliorer dans ce domaine. Il représente
+                une <strong>opportunité</strong> pour moi de m'entraîner, d'expérimenter et de mettre en pratique mes compétences en conception web.
+            </p>
+            <p class="texteP">
+                En dehors de mes activités techniques, je suis également une personne très <strong>sociale</strong>. J'apprécie les échanges avec les autres passionnés
+                de technologie et je suis toujours ouvert aux nouvelles idées et suggestions.
+            </p>
+            <p class="texteP">
+                N'hésitez pas à parcourir mon site et à me faire part de vos retours. Vos <strong>commentaires sont précieux</strong> pour moi et m'aideront à évoluer et
+                à améliorer continuellement cette plateforme.
+            </p>
+            <p class="texteP">
+                Merci de votre visite et à bientôt !
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="center-content">
+        <h2>Compétences</h2>
+        <div class="skills-container">
+            <div class="skill-card" data-description="html-description">
+                <img src="ressource/Image/html.png" alt="HTML">
+                <h3>HTML</h3>
+            </div>
+            <div class="skill-card" data-description="css-description">
+                <img src="ressource/Image/css.png" alt="CSS">
+                <h3>CSS</h3>
+            </div>
+            <div class="skill-card" data-description="javascript-description">
+                <img src="ressource/Image/javascript.png" alt="JavaScript">
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-card" data-description="python-description">
+                <img src="ressource/Image/python.png" alt="Python">
+                <h3>Python</h3>
+            </div>
+            <div class="skill-card" data-description="scratch-description">
+                <img src="ressource/Image/scratch.png" alt="Scratch">
+                <h3>Scratch</h3>
+            </div>
+            <div class="skill-card" data-description="wep-description">
+                <img src="ressource/Image/WordExcelPowerPoint.png" alt="Word/Excel/PowerPoint">
+                <h3>Word/Excel/PowerPoint</h3>
+            </div>
+        </div>
+        <div id="html-description" class="skill-description">
+            <h4 class="center-text">HTML</h4>
+            <p class="center-text">HTML (HyperText Markup Language) est le langage standard utilisé pour créer des pages web. Il permet de structurer le contenu et les éléments d'une page web.</p>
+            <div class="html-progress-container">
+                <div class="html-progress-bar">
+                    <div class="html-progress-fill" id="html-progress-fill"></div>
+                </div>
+                <div class="html-progress-labels">
+                    <div class="html-progress-label">Noob</div>
+                    <div class="html-progress-label">Débutant</div>
+                    <div class="html-progress-label">Intermédiaire</div>
+                    <div class="html-progress-label">Expert</div>
+                </div>
+            </div>
+        </div>
+        <div id="css-description" class="skill-description">
+            <h4 class="center-text">CSS</h4>
+            <p class="center-text">CSS (Cascading Style Sheets) est utilisé pour styliser les pages web. Il permet de contrôler la présentation des éléments en ajustant les couleurs, les polices, la mise en page, etc.</p>
+            <div class="css-progress-container">
+                <div class="css-progress-bar">
+                    <div class="css-progress-fill" id="css-progress-fill"></div>
+                </div>
+                <div class="css-progress-labels">
+                    <div class="css-progress-label">Noob</div>
+                    <div class="css-progress-label">Débutant</div>
+                    <div class="css-progress-label">Intermédiaire</div>
+                    <div class="css-progress-label">Expert</div>
+                </div>
+            </div>
+        </div>
+        <div id="javascript-description" class="skill-description">
+            <h4 class="center-text">JavaScript</h4>
+            <p class="center-text">JavaScript est un langage de programmation qui permet de rendre les pages web interactives, par exemple en ajoutant des animations, en validant des formulaires, ou en chargeant dynamiquement du contenu.</p>
+            <div class="js-progress-container">
+                <div class="js-progress-bar">
+                    <div class="js-progress-fill" id="js-progress-fill"></div>
+                </div>
+                <div class="js-progress-labels">
+                    <div class="js-progress-label">Noob</div>
+                    <div class="js-progress-label">Débutant</div>
+                    <div class="js-progress-label">Intermédiaire</div>
+                    <div class="js-progress-label">Expert</div>
+                </div>
+            </div>
+        </div>
+        <div id="python-description" class="skill-description">
+            <h4 class="center-text">Python</h4>
+            <p class="center-text">Python est un langage de programmation polyvalent et très utilisé pour le développement web, l'analyse de données, l'intelligence artificielle, et bien plus encore.</p>
+            <div class="py-progress-container">
+                <div class="py-progress-bar">
+                    <div class="py-progress-fill" id="py-progress-fill"></div>
+                </div>
+                <div class="py-progress-labels">
+                    <div class="py-progress-label">Noob</div>
+                    <div class="py-progress-label">Débutant</div>
+                    <div class="py-progress-label">Intermédiaire</div>
+                    <div class="py-progress-label">Expert</div>
+                </div>
+            </div>
+        </div>
+        <div id="scratch-description" class="skill-description">
+            <h4 class="center-text">Scratch</h4>
+            <p class="center-text">Scratch est un langage de programmation visuel utilisé principalement pour l'enseignement, permettant de créer des projets interactifs tels que des jeux, des animations, et des histoires numériques.</p>
+            <div class="sc-progress-container">
+                <div class="sc-progress-bar">
+                    <div class="sc-progress-fill" id="sc-progress-fill"></div>
+                </div>
+                <div class="sc-progress-labels">
+                    <div class="sc-progress-label">Noob</div>
+                    <div class="sc-progress-label">Débutant</div>
+                    <div class="sc-progress-label">Intermédiaire</div>
+                    <div class="sc-progress-label">Expert</div>
+                </div>
+            </div>
+        </div>
+        <div id="wep-description" class="skill-description">
+            <h4 class="center-text">Word/Excel/PowerPoint</h4>
+            <p class="center-text">Word, Excel et PowerPoint sont des outils de la suite Microsoft Office utilisés pour la création de documents, de feuilles de calcul et de présentations.</p>
+            <div class="wep-progress-container">
+                <div class="wep-progress-bar">
+                    <div class="wep-progress-fill" id="wep-progress-fill"></div>
+                </div>
+                <div class="wep-progress-labels">
+                    <div class="wep-progress-label">Noob</div>
+                    <div class="wep-progress-label">Débutant</div>
+                    <div class="wep-progress-label">Intermédiaire</div>
+                    <div class="wep-progress-label">Expert</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Mon Avenir</h2><br><br><br>
+        <h4 class="textePP"><strong>Mon propre jeu vidéo</strong></h4><br>
+        <p class="texteP">Je suis en train de planifier un jeu vidéo open world passionnant.</p>
+        <p class="texteP">Le nom du jeu n'est pas encore choisi, mais j’ai plusieurs idée de nom à l’esprit ayant un tas d’idées pour mes futurs projets</p>
+        <p class="texteP">Mon objectif est de développer un jeu avec des graphismes magnifiques et une atmosphère calme, ou les joueurs pourront créer et gérer leur propre monde.</p>
+        <p class="texteP">Ce projet est encore à l'état de concept, mais je suis très enthousiaste à l'idée de le réaliser dans le futur.</p><br>
+        <h4 class="textePP"><strong>Créer une entreprise</strong></h4><br>
+        <p class="texteP">Je souhaiterais potentiellement lancer ma propre entreprise.</p>
+        <p class="texteP">L'idée est de créer une plateforme innovante qui offre des solutions technologiques pour les petites et moyennes entreprises.</p>
+        <p class="texteP">Ma mission est de faciliter la gestion quotidienne des entreprises grâce à des outils intuitifs et efficaces.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="slider-container slider-1">
+            <div class="slider">
+                <p><img src="ressource/Image/gmail.png" alt="Email Icon"><a href="mailto:evan.barreiros.pro@gmail.com" class="no-underline">E-mail</a></p>
+                <p><img src="ressource/Image/Discord.png" alt="Discord Icon"><a href="https://discord.gg/xquSZ62kug" class="no-underline">Discord</a></p>
+                <p><img src="ressource/Image/Twitch.png" alt="Twitch Icon"><a href="https://www.twitch.tv/bleudragonviolet" class="no-underline">Twitch</a></p>
+                <p><img src="ressource/Image/Instagram.png" alt="Instagram icon"><a href="https://www.instagram.com/vavanette_/" class="no-underline">Instagram</a></p>
+                <p><img src="ressource/Image/TikTok.png" alt="TikTok Icon"><a href="https://www.tiktok.com/@va_an19" class="no-underline">TikTok</a></p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <div class="content">
+        <div class="credit">
+            <p>©️ Crédits : Evan Barreiros ©️</p>
+        </div>
+    </div>
+</body>
+</html>
