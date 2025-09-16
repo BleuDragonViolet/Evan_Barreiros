@@ -1,14 +1,14 @@
 :root {
-    --css-progress: 70%; /* Définissez la progression pour CSS ici */
+    --php-progress: 3%; /* Ajuste selon ton niveau */
 }
 
-.css-progress-container {
+.php-progress-container {
     width: 80%;
     max-width: 600px;
     margin: 20px auto;
 }
 
-.css-progress-bar {
+.php-progress-bar {
     width: 100%;
     background-color: #f0f0f0;
     border-radius: 10px;
@@ -17,20 +17,20 @@
     height: 20px;
 }
 
-.css-progress-fill {
+.php-progress-fill {
     height: 100%;
-    background-color: #4882da;
-    width: var(--css-progress); /* Utilisez la variable CSS pour définir la largeur */
+    background-color: #8892be; /* Violet PHP */
+    width: var(--php-progress); 
     transition: width 0.3s;
 }
 
-.css-progress-labels {
+.php-progress-labels {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
 
-.css-progress-label {
+.php-progress-label {
     text-align: center;
     width: 25%;
 }

@@ -1,5 +1,5 @@
 :root {
-    --py-progress: 5%; /* Définissez la progression pour Phyton */
+    --py-progress: 10%; /* Définissez la progression pour Phyton */
 }
 
 .py-progress-container {
